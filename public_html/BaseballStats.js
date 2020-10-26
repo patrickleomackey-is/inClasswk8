@@ -3,33 +3,33 @@
  * batting average = .333
  * slugging % = .667
  */
-
+let stats = [];
 let batter = prompt("Enter the player's name:");
-let atBats = [];
+let atBats = Number(prompt("Enter the number of at bats for this player"));
 let hits = 0;
 let singles =0, doubles = 0, triples = 0, homers = 0;
-for (i = 0;i < 9; i++){
-atBats.push(Number(prompt("Enter the at bats")));
+for (i = 0;i < atBats; i++){
+stats.push(Number(prompt("Enter the result for  "+ batter + " at bats:")));
 }
 document.write("Baseball statistics program<br><br>");
-for (index = 0;index < atBats.length; index++){
-    if (atBats[index] > 0)
+for (index = 0;index < stats.length; index++){
+    if (stats[index] > 0)
     {hits++;}}
 
-let batAvg = hits/atBats.length;
+let batAvg = hits/stats.length;
 
-for (i =0; i < atBats.length; i++){
-    if (atBats[i]=== 1)
+for (i =0; i < stats.length; i++){
+    if (stats[i]=== 1)
     {singles++;}
-    if (atBats[i] === 2)
+    if (stats[i] === 2)
     {doubles++;}
-    if (atBats[i]=== 3)
+    if (stats[i]=== 3)
     {triples++;}
-    if (atBats[i]=== 4)
+    if (stats[i]=== 4)
     {homers++;}
 }
 
-let sluggingPct = (singles + 2*doubles+ 3*triples + 4*homers)/ atBats.length;
+let sluggingPct = (singles + 2*doubles+ 3*triples + 4*homers)/ stats.length;
 
 document.write("<br>"+ batter);
 document.write("<br>"+ batAvg.toFixed(3)+" batting average");
