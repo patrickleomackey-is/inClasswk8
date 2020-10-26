@@ -9,7 +9,7 @@ let atBats = Number(prompt("Enter the number of at bats for this player"));
 let hits = 0;
 let singles =0, doubles = 0, triples = 0, homers = 0;
 for (i = 0;i < atBats; i++){
-stats.push(Number(prompt("Enter the result for  "+ batter + " at bats:")));
+stats.push(Number(prompt("Enter the result for  "+ batter + "'s at bats:")));
 }
 document.write("Baseball statistics program<br><br>");
 for (index = 0;index < stats.length; index++){
